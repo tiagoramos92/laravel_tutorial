@@ -12,12 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
 Route::get('contact', function () {
-    return view('pages.contact');
+	return view('pages.contact');
 });
 
-
 Route::get('about', 'PagesController@about');
+Route::get('articles', 'ArticlesController@index');
+Route::get('articles/{id}', 'ArticlesController@show');
+
+
